@@ -1,7 +1,10 @@
 #include <iostream>
 
+extern int x;
+
 int main(){
-  int number = 2;
   std::cout << "Hello World" << std::endl;
-  return 0;
+  std::cout << x;
+
+  return 0; 
 }

@@ -1,7 +1,9 @@
 #include <iostream>
 
 int main(){
-  int number = 2;
+  int favorite_number;
+
   std::cout << "Hello World" << std::endl;
-  return 0;
+
+  return 0; 
 }
