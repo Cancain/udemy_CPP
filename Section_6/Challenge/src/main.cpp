@@ -58,14 +58,18 @@ void print_estimate(int number_of_small_rooms, int number_of_large_rooms){
   cout << endl;
 }
 
+void print_order(int number_of_small_rooms, int number_of_large_rooms){
+  print_confirmation(number_of_small_rooms, number_of_large_rooms);
+  print_estimate(number_of_small_rooms, number_of_large_rooms);
+}
+
 int main(){
   cout << "Hello, welcome to Franks carpet cleaning service!" << endl;
 
   int number_of_small_rooms {prompt_rooms("small")};
   int number_of_large_rooms {prompt_rooms("large")};
 
-  print_confirmation(number_of_small_rooms, number_of_large_rooms);
-  print_estimate(number_of_small_rooms, number_of_large_rooms);
+  print_order(number_of_small_rooms, number_of_large_rooms);
 
   return 0; 
 }
