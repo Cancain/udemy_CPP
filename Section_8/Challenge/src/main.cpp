@@ -20,7 +20,7 @@ using std::string;
 int cents {0};
 
 int getCents() {
-  cout << "Enter an ammount in cents: ";
+  cout << "Enter an amount in cents: ";
 
   int cents {0};
   cin >> cents;
