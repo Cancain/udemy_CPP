@@ -104,23 +104,32 @@ void display_mean(){
 }
 
 void display_smallest() {
-  int smallest {numbers.at(0)};
+  if(numbers.size() <= 0){
+    cout << "\nCannot display mean, no data available\n" << endl;
 
-  for (auto number : numbers){
-    if(number < smallest) smallest = number;
+  } else {
+    int smallest {numbers.at(0)};
+
+    for (auto number : numbers){
+      if(number < smallest) smallest = number;
+    }
+
+    cout << endl << smallest << endl << endl;
   }
-
-  cout << endl << smallest << endl << endl;
 }
 
 void display_largest() {
-  int largest {numbers.at(0)};
+  if(numbers.size() <= 0){
+    cout << "\nCannot display mean, no data available\n" << endl;
+    
+  } else {
+    int largest {numbers.at(0)};
+    for (auto number : numbers){
+      if(number > largest) largest = number;
+    }
 
-  for (auto number : numbers){
-    if(number > largest) largest = number;
+    cout << endl << largest << endl << endl;
   }
-
-  cout << endl << largest << endl << endl;
 }
 
 void route(char input){
