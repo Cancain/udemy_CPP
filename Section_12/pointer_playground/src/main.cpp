@@ -2,14 +2,22 @@
 
 using namespace std;
 
-int main(){
-  int *p;
-  cout << "Value of p is: " << p << endl;
-  cout << "Address of p is: " << &p << endl;
-  cout << "Size of p is: " << sizeof p << endl;
+void func(int *ptr){
+  int newNum {20};
+  ptr = &newNum;
+}
 
-  p = nullptr;
-  cout << "Value of p is: " << p << endl;
+int main(){
+  int num {10};
+  int *num_ptr {&num};
+
+  cout << num_ptr << endl;
+
+  func(num_ptr);
+
+  cout << num_ptr << endl;
+
+  cout << num << endl;
 
   return 0;
 }
