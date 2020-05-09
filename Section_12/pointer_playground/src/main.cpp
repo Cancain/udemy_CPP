@@ -2,22 +2,12 @@
 
 using namespace std;
 
-void func(int *ptr){
-  int newNum {20};
-  ptr = &newNum;
-}
 
 int main(){
-  int num {10};
-  int *num_ptr {&num};
 
-  cout << num_ptr << endl;
+  int arr[] {10, 20, 30};
 
-  func(num_ptr);
-
-  cout << num_ptr << endl;
-
-  cout << num << endl;
-
+  std::cout << arr << endl;
+  std::cout << *arr << endl;
   return 0;
 }
