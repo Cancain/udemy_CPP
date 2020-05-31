@@ -11,9 +11,14 @@ int Movies::_get_movie_index(std::string name){
 }
 
 bool Movies::add_movie(std::string name, Rating rating, int watched){
-  Movie *new_movie = new Movie(name, rating, watched);
-  _movies.push_back(new_movie);
-  return true;
+  if(_get_movie_index(name) == -1){
+    Movie *new_movie = new Movie(name, rating, watched);
+    _movies.push_back(new_movie);
+    return true;
+  }
+
+  std::cout << "Movie already added" << std::endl;
+  return false;
 }
 
 bool Movies::remove_movie(std::string name){
@@ -32,6 +37,7 @@ bool Movies::increment_watched(std::string name){
     _movies.at(position)->increment_watched();
     return true;
   }
+  std::cout << "No movie by the name: " << name << std::endl;
   return false;
 }
 
