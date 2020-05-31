@@ -8,10 +8,10 @@ class Movies{
     int _get_movie_index(const std::string name);
 
   public:
-    bool add_movie(std::string name, Rating rating = none, int watched = 1);
-    bool remove_movie(std::string);
+    bool add_movie(std::string const name, Rating const rating = none, int const watched = 1);
+    bool remove_movie(std::string const name);
 
-    bool increment_watched(std::string name);
+    bool increment_watched(std::string const name);
 
     void display_movies() const;
   

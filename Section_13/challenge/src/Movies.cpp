@@ -10,7 +10,7 @@ int Movies::_get_movie_index(const std::string name){
   return -1;
 }
 
-bool Movies::add_movie(std::string name, Rating rating, int watched){
+bool Movies::add_movie(std::string const name, Rating const rating, int const watched){
   if(_get_movie_index(name) == -1){
     Movie *new_movie = new Movie(name, rating, watched);
     _movies.push_back(new_movie);
@@ -21,7 +21,7 @@ bool Movies::add_movie(std::string name, Rating rating, int watched){
   return false;
 }
 
-bool Movies::remove_movie(std::string name){
+bool Movies::remove_movie(std::string const name){
   const int position = _get_movie_index(name);
   if(position >= 0){
     delete _movies.at(position);
@@ -31,7 +31,7 @@ bool Movies::remove_movie(std::string name){
   return false;
 }
 
-bool Movies::increment_watched(std::string name){
+bool Movies::increment_watched(std::string const name){
   const int position = _get_movie_index(name);
   if(position >= 0){
     _movies.at(position)->increment_watched();
@@ -48,7 +48,7 @@ void Movies::display_movies() const {
     std::cout << "No movies added..." << std::endl; 
   }
 
-  for(Movie *movie : _movies){
+  for(Movie const *movie : _movies){
     std::cout 
       << movie->get_name() 
       << ", "
