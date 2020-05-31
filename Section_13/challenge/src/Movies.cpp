@@ -1,7 +1,7 @@
 #include <iostream>
 #include "Movies.h"
 
-int Movies::_get_movie_index(std::string name){
+int Movies::_get_movie_index(const std::string name){
   for (int i{0}; i < _movies.size(); ++i){
     if(_movies.at(i)->get_name() == name){
       return i;
@@ -41,7 +41,7 @@ bool Movies::increment_watched(std::string name){
   return false;
 }
 
-void Movies::display_movies(){
+void Movies::display_movies() const {
   if(_movies.size() > 0){
     std::cout << "==============================" << std::endl;
   } else {

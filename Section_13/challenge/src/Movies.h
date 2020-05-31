@@ -5,7 +5,7 @@ class Movies{
   private:
     std::vector<Movie*> _movies;
 
-    int _get_movie_index(std::string name);
+    int _get_movie_index(const std::string name);
 
   public:
     bool add_movie(std::string name, Rating rating = none, int watched = 1);
@@ -13,7 +13,7 @@ class Movies{
 
     bool increment_watched(std::string name);
 
-    void display_movies();
+    void display_movies() const;
   
     ~Movies();
 };

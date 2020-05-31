@@ -4,7 +4,7 @@ std::string Movie::get_name() const {
   return _name;
 }
 
-void Movie::set_name(std::string name){
+void Movie::set_name(std::string const name){
   _name = name;
 }
 
@@ -12,7 +12,7 @@ Rating Movie::get_rating() const {
   return _rating;
 }
 
-void Movie::set_rating(Rating rating) {
+void Movie::set_rating(Rating const rating) {
   _rating = rating;
 }
 
@@ -24,5 +24,5 @@ void Movie::increment_watched(){
   ++_watched;
 }
 
-Movie::Movie(std::string name, Rating rating, int watched)
+Movie::Movie(std::string const name, Rating const rating, int const watched)
       :_name{name}, _rating{rating}, _watched{watched}{}
