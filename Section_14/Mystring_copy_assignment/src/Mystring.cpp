@@ -29,6 +29,7 @@ Mystring::~Mystring(){
   delete [] str;
 }
 
+// Copy constructor
 Mystring& Mystring::operator=(const Mystring &rhs){
   std::cout << "Copy assignment" << std::endl;
   if(this == &rhs)
